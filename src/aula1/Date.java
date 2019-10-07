@@ -1,5 +1,7 @@
 package aula1;
 
+import java.time.LocalDateTime;
+
 public class Date 
 {
 	public static int[] MONTHS_31 = new int[] {1,3,5,7,8,10,12};
@@ -48,6 +50,11 @@ public class Date
 	{
 		return this.year;
 	}
+
+	public String toString()
+	{
+		return this.day + "/" + this.month + "/" + this.year;
+	}
 	
 	public static int monthNumberOfDays(int month, int year)
 	{
@@ -92,9 +99,11 @@ public class Date
 			return false;
 		}
 	}
-
-	public String toString()
+	
+	public static Date today()
 	{
-		return this.day + "/" + this.month + "/" + this.year;
+		LocalDateTime localDate = LocalDateTime.now();
+
+		return new Date(localDate.getDayOfMonth(), localDate.getMonthValue(), localDate.getYear());
 	}
 }
