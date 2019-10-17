@@ -1,33 +1,38 @@
 package aula3;
 
-import java.util.LinkedList;
-
 public class Figure 
 {
-	private LinkedList<Point> points;
+	private Point center;
+	private double side1;
+	private double side2;
 	
-	public Figure(Point p1, Point p2)
+	public Figure(Point center, double side1, double side2)
 	{
-		this.points = new LinkedList<Point>();
-		this.points.add(p1);
-		this.points.add(p2);
+		this.center = center;
+		this.side1 = side1;
+		this.side2 = side2;
 	}	
 	
 	public double getArea() 
 	{
-		double area = (this.points.get(1).getX() - this.points.get(0).getX()) * (this.points.get(1).getY() - this.points.get(0).getY());
+		double area = this.side1 * this.side2;
 		return Math.abs(area);
 	}
 
 	public double getPerimeter() 
 	{
-		double p = 2 * (this.points.get(1).getX() - this.points.get(0).getX()) + 2 * this.points.get(1).getY() - this.points.get(0).getY();
+		double p = 2 * this.side1 + 2 * this.side2;
 		return Math.abs(p);
 	}
 	
-	public LinkedList<Point> getPoints()
+	public Point getCenter()
 	{
-		return this.points;
+		return this.center;
+	}
+	
+	public double[] getSides()
+	{
+		return new double[] {this.side1, this.side2};
 	}
 	
 	public boolean equals(Figure f)
@@ -36,19 +41,22 @@ public class Figure
 		
 		if(this == f) return true;
 		
-		for(int i = 0; i < this.points.size(); i++)
+		if(this.center.equals(f.getCenter()))
 		{
-			if(!this.points.get(i).equals(f.getPoints().get(i)))
+			if(this.side1 == f.getSides()[1] && this.side2 == f.getSides()[2])
 			{
-				return false;
+				return true;
 			}
 		}
 		
-		return true;
+		return false;
 	}
 	
 	public String toString()
 	{
-		return this.getClass().getName();
+		return this.getClass().getSimpleName() + "\n"
+				+ "Area: " + this.getArea() + "\n"
+				+ "Perimeter: " + this.getPerimeter() + "\n"
+				+ "Center: " + this.getCenter() + "\n";
 	}
 }

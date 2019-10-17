@@ -23,6 +23,13 @@ public class Fellow extends Student
 		this.fellowshipEnd = fellowshipEnd;
 	}
 	
+	public Fellow(String name, int cc, Date birth) 
+	{
+		super(name, cc, birth);
+		this.fellowshipStart = Date.today();
+		this.fellowshipEnd = new Date(1,1,1970);
+	}
+	
 	public void setFellowship(double v)
 	{
 		this.fellowshipVal = v;
@@ -46,13 +53,7 @@ public class Fellow extends Student
 	@Override 
 	public String toString()
 	{
-		return "----------------------------------\n"
-				+ "Name: " + this.getName() + "\n"
-				+ "CC: " + this.getCC()+ "\n"
-				+ "Birth: " + this.getBirth().toString() + "\n"
-				+ "Course: " + this.getCourse() + "\n"
-				+ "Nmec: " + this.getNmec()+ "\n"
-				+ "Inscrição: " + this.getSignDate().toString() + "\n"
+		return 	super.toString()
 				+ "Valor da bolsa: " + this.getFellowship() + "\n"
 				+ "Início da bolsa: " + this.getFellowshipStart() + "\n"
 				+ "Fim da bolsa: " + this.getFellowshipEnd() + "\n"

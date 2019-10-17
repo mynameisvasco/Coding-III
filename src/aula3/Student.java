@@ -26,6 +26,15 @@ public class Student extends Person
 		this.signDate = Date.today();
 	}
 	
+	public Student(String name, int cc, Date birth)
+	{
+		super(name, cc, birth);
+		this.nmec = Student.nmecBase++;
+		this.course = "";
+		this.signDate = Date.today();
+	}
+	
+	
 	public String getCourse()
 	{
 		return this.course;
@@ -43,10 +52,7 @@ public class Student extends Person
 	
 	public String toString()
 	{
-		return "----------------------------------\n"
-				+ "Name: " + this.getName() + "\n"
-				+ "CC: " + this.getCC()+ "\n"
-				+ "Birth: " + this.getBirth().toString() + "\n"
+		return 	super.toString()
 				+ "Course: " + this.getCourse() + "\n"
 				+ "Nmec: " + this.getNmec()+ "\n"
 				+ "Inscrição: " + this.getSignDate().toString() + "\n"

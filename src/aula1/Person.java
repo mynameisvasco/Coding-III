@@ -34,6 +34,8 @@ public class Person
 	
 	public String toString()
 	{
-		return this.name + " - " + this.cc + " - " + this.birth.toString();
+				return "Name: " + this.getName() + "\n"
+				+ "CC: " + this.getCC()+ "\n"
+				+ "Birth: " + this.getBirth().toString() + "\n";
 	}
 }

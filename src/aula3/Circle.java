@@ -11,12 +11,12 @@ public class Circle extends Figure
 	
 	public Circle(Circle c)
 	{
-		this(c.getPoints().get(0).getX(), c.getPoints().get(0).getY(), c.getRadius());
+		this(c.getCenter().getX(), c.getCenter().getY(), c.getRadius());
 	}
 	
 	public Circle(double x, double y, double r)
 	{
-		super(new Point(x, y), new Point(x, y + r));
+		super(new Point(x, y), 2*r, 2*r);
 		this.radius = r;
 	}
 	
