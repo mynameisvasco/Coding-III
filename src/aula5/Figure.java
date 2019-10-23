@@ -1,6 +1,6 @@
-package aula3;
+package aula5;
 
-public class Figure 
+public class Figure implements Comparable<Figure>
 {
 	private Point center;
 	private double side1;

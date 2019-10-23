@@ -1,9 +1,6 @@
-package aula4;
+package aula5;
 
 import java.util.LinkedList;
-
-import aula3.Figure;
-import aula3.Point;
 
 public class FigureCollection 
 {
