@@ -1,0 +1,16 @@
+Companhia 	 Atraso Médio (minutos) 
+Sata Internacional	35
+Transavia France	14
+EasyJet Airlines	12
+TAAG	10
+TAP Portugal	8
+Iberia	8
+Ryanair	6
+Lufthansa	1
+Turkish Airlines	0
+Brussels Airlines	0
+Swiss International	0
+Luxair	0
+Evelop Airlines	0
+Air Europa	0
+HOP!	0

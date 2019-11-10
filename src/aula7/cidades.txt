@@ -1,0 +1,44 @@
+Origem 	 Nº de Voos 
+Lisboa	11
+Madrid	9
+Paris, Orly	8
+Faro	2
+Paris, Ch. de Gaulle	2
+Brussels, Charleroi	1
+Frankfurt, Hahn	1
+Toronto, Pearson	1
+São Paulo, Guarulhos	1
+Madeira	4
+Manchester	1
+Barcelona	3
+Frankfurt	3
+Geneva	6
+Paris, Beauvais	2
+London, Stansted	2
+Brussels	4
+Milan/Bergamo	1
+Basel	2
+London, Gatwick	3
+Rome, Fiumicino	1
+Istanbul, Ataturk	1
+London, Luton	1
+Eindhoven	1
+Valencia	1
+Milan, Malpensa	2
+Ponta Delgada	1
+Clermont-Ferrand	2
+Paris, Vatry	1
+Carcassonne	1
+Saint Etienne	1
+Lyon, St. Exupery	1
+Toulouse, Blagnac	1
+Zurich	2
+Palma Mallorca	1
+Luxembourg	2
+Luanda	1
+Tenerife Sur	1
+Marseille	1
+Amsterdam	1
+Lille	1
+Hamburg	1
+Memmingen	1
