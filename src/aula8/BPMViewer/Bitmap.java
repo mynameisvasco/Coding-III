@@ -1,4 +1,4 @@
-package aula7;
+package aula8.BPMViewer;
 
 import java.io.File;
 import java.io.IOException;
@@ -113,6 +113,7 @@ public class Bitmap
 		}
 		
 		this.pixelArray = newPixelArray;
+		this.data = pixelToByteArray(newPixelArray);
 	}
 	
 	public Pixel[][] flipVertical()
@@ -199,7 +200,7 @@ public class Bitmap
 		//Info header
 		bmpFile.writeInt(Integer.reverseBytes(this.getBitmapInfoHeader().getSize()));
 		bmpFile.writeInt(Integer.reverseBytes(this.getBitmapInfoHeader().getWidth()));
-		bmpFile.writeInt(Integer.reverseBytes(this.getBitmapInfoHeader().getHeight()));
+		bmpFile.writeInt(Integer.reverseBytes(-Math.abs(this.getBitmapInfoHeader().getHeight())));
 		bmpFile.writeShort(Short.reverseBytes(this.getBitmapInfoHeader().getPlanes()));
 		bmpFile.writeShort(Short.reverseBytes(this.getBitmapInfoHeader().getBitCount()));
 		bmpFile.writeInt(Integer.reverseBytes(this.getBitmapInfoHeader().getCompression()));
