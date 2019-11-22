@@ -1,10 +1,15 @@
 package aula9;
 
+import java.io.IOException;
+
 public class TestScannerAbeirense 
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
 		ScannerAbeirense sa = new ScannerAbeirense(System.in);
-		String s = sa.
+		System.out.print("Texto: ");
+		String s = sa.nextLine();
+		System.out.println(s);
+		sa.close();
 	}
 }
